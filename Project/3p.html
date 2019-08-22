@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <script src='https://unpkg.com/mapillary-js@2.18.0/dist/mapillary.min.js'></script>
+    <link href='https://unpkg.com/mapillary-js@2.18.0/dist/mapillary.min.css' rel='stylesheet' />
+
+    <style>
+        html, body { margin: 0; padding: 0; height: 100%; }
+        #mly { height: 90%; }
+    </style>
+</head>
+
+<body>
+    <div id='mly'>
+
+    <button onclick='play()'>Play</button>
+    <button onclick='stop()'>Stop</button>
+	</div>
+    <script>
+        var mly = new Mapillary.Viewer(
+            'mly',
+            // Replace this with your own client ID from mapillary.com
+            'SXF1QzhQdHhTUGt2cnRPeWJEM2tkQTpkNjE1NjVhMWFkMTA1MDVl',
+            'uuUUvOWmkIVZ8hOOn0UyDQ',
+            {
+                component: {
+                    cover: true,
+                    cache: false,
+                    direction: true,
+                    sequence: true
+                }
+            });
+
+        var routeComponent = mly.getComponent('route');
+
+        function play() {
+            routeComponent.play();
+        }
+
+        function stop() {
+            routeComponent.stop()
+        }
+
+        routeComponent.configure({
+            paths: [
+                {
+                    sequenceKey: '3goXvCYkKFML2FVvw9DDSA', startKey: 'uuUUvOWmkIVZ8hOOn0UyDQ', stopKey: 'uuUUvOWmkIVZ8hOOn0UyDQ',
+                    infoKeys: [
+                        // Hi InnoMap Team, I also added image keys to description to check if mapillary plays pictures randomly or not.
+                        { key: 'uuUUvOWmkIVZ8hOOn0UyDQ', description: '1. image: uuUUvOWmkIVZ8hOOn0UyDQ' }
+                        // { key: '2dG_ycRhng9pqeA0ZMamUQ', description: 'We love our city.' }
+                    ]
+                },
+                {
+                    sequenceKey: '3goXvCYkKFML2FVvw9DDSA', startKey: 'a6sH1dDn8dc2LvYbaTOV2A', stopKey: 'a6sH1dDn8dc2LvYbaTOV2A',
+                    infoKeys: [
+                        { key: 'a6sH1dDn8dc2LvYbaTOV2A', description: '2. iamge: a6sH1dDn8dc2LvYbaTOV2A' }
+                    ]
+                },
+                {
+                    sequenceKey: '3goXvCYkKFML2FVvw9DDSA', startKey: 'ylAaO3E9w_hf8vqcwk1u6Q', stopKey: 'ylAaO3E9w_hf8vqcwk1u6Q',
+                    infoKeys: [
+                        { key: 'ylAaO3E9w_hf8vqcwk1u6Q', description: '3. image: ylAaO3E9w_hf8vqcwk1u6Q' },
+                    ]
+                },
+            ],
+            playing: true
+        });
+
+        mly.activateComponent('route');
+    </script>
+</body>
+</html>
