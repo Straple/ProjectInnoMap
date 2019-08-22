@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title></title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+
+    <script src='https://unpkg.com/mapillary-js@2.18.0/dist/mapillary.min.js'></script>
+    <link href='https://unpkg.com/mapillary-js@2.18.0/dist/mapillary.min.css' rel='stylesheet' />
+
+    <style>
+        html, body { margin: 0; padding: 0; height: 100%; }
+        #mly { height: 90%; }
+    </style>
+</head>
+
+<body>
+    <div id='mly'>
+
+    <button onclick='play()'>Play</button>
+    <button onclick='stop()'>Stop</button>
+	</div>
+    <script>
+        var mly = new Mapillary.Viewer(
+            'mly',
+            // Replace this with your own client ID from mapillary.com
+            'WU5CV0liMmgwbEM4VWJMaG04VUdaQTpkZWRhM2NhMWRiOTRhZGU1',
+            'BOXkKnhzmlScQhLg4PxCeA',
+            {
+                component: {
+                    cover: true,
+                    cache: false,
+                    direction: false,
+                    sequence: true
+                }
+            });
+
+        var routeComponent = mly.getComponent('route');
+
+        function play() {
+            routeComponent.play();
+        }
+
+        function stop() {
+            routeComponent.stop()
+        }
+/*
+seq: bi0iSYLokPhKBtWlWSuvCw
+1. j7IqdukgWpxLApPU4yItTw
+2. zzcN_YhnqjMrT2cAN5AJpg
+3. qf3crWgC_K5iSRzzDvVQVg
+4. Tu2xPTbtPGCVyczTngZhmQ
+5. cbcOQax7kWB6ByRJjaVWBg
+6. D-kV8kdkGByTY142rcBGig
+7. kj_FCm4EIqZ1XNTssGtqRA
+8. 1wuNHuwu63PXDWczAMrkeQ
+9. oV5mmrcoK8pjlc-_kglVaw
+10. 94Elq_DneNHTdDs2tn5SHw
+11. UOtxJ9Nwmp6jh7B29Jy6wQ
+12. zZ457caM8fpq7X01_o0Ahg
+13. XvdAYyL6Ozvj7uvqhDVZLg
+ */
+        routeComponent.configure({
+            paths: [
+                {
+                    sequenceKey: 'DZCt4K1gfcUPnZFCQxwjCA', startKey: 'BOXkKnhzmlScQhLg4PxCeA', stopKey: 'BOXkKnhzmlScQhLg4PxCeA',
+                    infoKeys: [
+                        // Hi InnoMap Team, I also added image keys to description to check if mapillary plays pictures randomly or not.
+                        { key: 'BOXkKnhzmlScQhLg4PxCeA', description: '1. BOXkKnhzmlScQhLg4PxCeA' }
+                    ]
+                },
+                {
+                    sequenceKey: 'DZCt4K1gfcUPnZFCQxwjCA', startKey: 'pMqKrsPcDoK5IbeQwjza8w', stopKey: 'pMqKrsPcDoK5IbeQwjza8w',
+                    infoKeys: [
+                        { key: 'pMqKrsPcDoK5IbeQwjza8w', description: '2. pMqKrsPcDoK5IbeQwjza8w' }
+                    ]
+                },
+                {
+                    sequenceKey: 'DZCt4K1gfcUPnZFCQxwjCA', startKey: 'y5ieH6irMUNiIlIpZdCCYg', stopKey: 'y5ieH6irMUNiIlIpZdCCYg',
+                    infoKeys: [
+                        { key: 'y5ieH6irMUNiIlIpZdCCYg', description: '3. y5ieH6irMUNiIlIpZdCCYg' }
+                    ]
+                },
+                {
+                    sequenceKey: 'DZCt4K1gfcUPnZFCQxwjCA', startKey: 'Nv_vOX5NAmfEpo_2sDbb_w', stopKey: 'Nv_vOX5NAmfEpo_2sDbb_w',
+                    infoKeys: [
+                        { key: 'Nv_vOX5NAmfEpo_2sDbb_w', description: '4. Nv_vOX5NAmfEpo_2sDbb_w' }
+                    ]
+                },
+                {
+                    sequenceKey: 'DZCt4K1gfcUPnZFCQxwjCA', startKey: 'QpB_dgKZtaqddyARg01P2Q', stopKey: 'QpB_dgKZtaqddyARg01P2Q',
+                    infoKeys: [
+                        { key: 'QpB_dgKZtaqddyARg01P2Q', description: '5. QpB_dgKZtaqddyARg01P2Q' }
+                    ]
+                },
+                {
+                    sequenceKey: 'DZCt4K1gfcUPnZFCQxwjCA', startKey: 'XjFr0SlEr8uLazdVNwVcuA', stopKey: 'XjFr0SlEr8uLazdVNwVcuA',
+                    infoKeys: [
+                        { key: 'XjFr0SlEr8uLazdVNwVcuA', description: '6. XjFr0SlEr8uLazdVNwVcuA' }
+                    ]
+                },
+                {
+                    sequenceKey: 'DZCt4K1gfcUPnZFCQxwjCA', startKey: 'R04u0GXnw4EGe_F0heW2NQ', stopKey: 'R04u0GXnw4EGe_F0heW2NQ',
+                    infoKeys: [
+                        { key: 'R04u0GXnw4EGe_F0heW2NQ', description: '7. R04u0GXnw4EGe_F0heW2NQ' }
+                    ]
+                },
+                {
+                    sequenceKey: 'DZCt4K1gfcUPnZFCQxwjCA', startKey: 'NK6jq7ryqHXUgJoEalYDrQ', stopKey: 'NK6jq7ryqHXUgJoEalYDrQ',
+                    infoKeys: [
+                        { key: 'NK6jq7ryqHXUgJoEalYDrQ', description: '8. NK6jq7ryqHXUgJoEalYDrQ' }
+                    ]
+                },
+            ],
+            playing: false
+        });
+
+        mly.activateComponent('route');
+    </script>
+</body>
+</html>
